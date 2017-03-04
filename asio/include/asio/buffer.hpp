@@ -169,6 +169,11 @@ public:
   /// A random-access iterator type that may be used to read elements.
   typedef const mutable_buffer* const_iterator;
 
+  mutable_buffers_1()
+    : mutable_buffer()
+  {
+  }
+
   /// Construct to represent a given memory range.
   mutable_buffers_1(void* data, std::size_t size)
     : mutable_buffer(data, size)
@@ -298,6 +303,9 @@ public:
 
   /// A random-access iterator type that may be used to read elements.
   typedef const const_buffer* const_iterator;
+
+    const_buffers_1() : const_buffer() {
+    }
 
   /// Construct to represent a given memory range.
   const_buffers_1(const void* data, std::size_t size)

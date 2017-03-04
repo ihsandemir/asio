@@ -62,7 +62,7 @@ public:
 
     // Ensure openssl_init::instance_ is linked in.
     openssl_init* tmp = &instance_;
-    memmove(&tmp, &tmp, sizeof(openssl_init*));
+    //memmove(&tmp, &tmp, sizeof(openssl_init*));
   }
 
   // Destructor.
